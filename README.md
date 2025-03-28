@@ -79,7 +79,3 @@ This application:
 ## License
 
 MIT
-
-## Contact
-
-For any questions or suggestions, please contact: your.email@example.com 
