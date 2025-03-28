@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Try-On Tool</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AR Virtual Try-On Experience</h1>
+        
+        <div class="ar-container">
+            <div class="video-container">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="overlay"></canvas>
+                <div class="loading-indicator" id="loading">
+                    <div class="spinner"></div>
+                    <p>Loading models...</p>
+                </div>
+                <div class="error-message" id="error">
+                    <p>Cannot access camera. Please ensure your device has a camera and you have granted access permission.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="product-selection">
+                <h2>Select Product</h2>
+                <div class="product-category">
+                    <h3>Glasses</h3>
+                    <div class="product-items" id="glasses-items">
+                        <div class="product-item" data-product="glasses1">
+                            <img src="public/images/glasses1.png" alt="Glasses Style 1">
+                        </div>
+                        <div class="product-item" data-product="glasses2">
+                            <img src="public/images/glasses2.png" alt="Glasses Style 2">
+                        </div>
+                        <div class="product-item" data-product="glasses3">
+                            <img src="public/images/glasses3.png" alt="Glasses Style 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-category">
+                    <h3>Hats</h3>
+                    <div class="product-items" id="hats-items">
+                        <div class="product-item" data-product="hat1">
+                            <img src="public/images/hat1.png" alt="Hat Style 1">
+                        </div>
+                        <div class="product-item" data-product="hat2">
+                            <img src="public/images/hat2.png" alt="Hat Style 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="adjustment-controls">
+                <h2>Adjustments</h2>
+                <div class="control-group">
+                    <label for="scale">Size</label>
+                    <input type="range" id="scale" min="0.5" max="1.5" step="0.01" value="1">
+                </div>
+                <div class="control-group">
+                    <label for="y-position">Vertical Position</label>
+                    <input type="range" id="y-position" min="-50" max="50" step="1" value="0">
+                </div>
+                <div class="control-group">
+                    <label for="rotation">Rotation</label>
+                    <input type="range" id="rotation" min="-30" max="30" step="1" value="0">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load third-party libraries first -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+
+    <!-- Then load our application code -->
+    <script src="src/js/app.js" type="module"></script>
+</body>
+</html> 
