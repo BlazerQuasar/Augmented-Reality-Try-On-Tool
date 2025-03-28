@@ -23,14 +23,5 @@ This directory is used to store AR try-on product images. For best results, plea
 - Ensure the entire hat is visible, including the brim (if applicable)
 - Crop away excess background
 
-## Sample Images
-
-This directory includes the following sample images for testing:
-
-- glasses1.png - Classic black frame glasses
-- glasses2.png - Round metal frame glasses
-- glasses3.png - Fashionable sunglasses
-- hat1.png - Baseball cap
-- hat2.png - Fedora hat
 
 You can replace these images with your own products, but please maintain the same filenames, or update the product items accordingly in index.html. 
